@@ -229,16 +229,19 @@
 </script>
 <style>
     .game {
-        display: flex;
+        display: inline-flex;
         flex-wrap: wrap;
         flex-direction: row;
         align-content: flex-start;
         width: 100%;
         height: 100%;
     }
-    .play-again {
+    .controls {
+        display: inline-block;
         position: absolute;
-        margin-right: 10px;
+        top: 30%;
+        left: 10%;
+
     }
 </style>
 <div class="game" on:click={onCellClick}>
@@ -248,4 +251,6 @@
         {/each}
     {/each}
 </div>
-<button class="play-again" on:click={resetBoard}>Play Again!</button>
+<div class="controls">
+    <button class="play-again" on:click={resetBoard}>Play Again!</button>
+</div>
