@@ -25,6 +25,15 @@
         filled_count = 0;
         game_over = false;
         result = "";
+        let toss = Math.random();
+        if(toss > 0.5) {
+            player = "O";
+            opponent = "X";
+        } else {
+            player = "X";
+            opponent = "O";
+            playComputer();
+        }
     }
 
     let toggleMarker = function () {
